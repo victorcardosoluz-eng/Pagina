@@ -1,41 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo Sobre Videogames</title>
+    <title>Blog dos Videogames</title>
 
-    <style>
-        body {
-            background-color: #4682B4;
-            color: #F5FFFA;
-            margin: 0;
-        }
-
-        header {
-            background-color: #4682B4;
-            color: MintCream;
-        }
-
-        main {
-            background-color: #4682B4;
-            color: #F5FFFA;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <h1>Tudo sobre a história dos consoles e VideoGames</h1>
+        <h1>Tudo Sobre Videogames</h1>
+        <p>Todas curiosidades e fatos sobre jogos eletrônicos!</p>
+        <style>
+        /* Estilos gerais do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define uma fonte mais moderna */
+            margin: 0;
+            background-color: #f4f4f9; /* Fundo levemente acinzentado */
+        }
+
+        /* Estilo do cabeçalho principal */
+        header {
+            background-color: #4169E1; /* Azul escuro */
+            color: #FFFFFF; /* Texto branco */
+            text-align: center; /* Centraliza o texto */
+            max-width: 1200px;
+            margin: 0 auto; /* Centraliza o cabeçalho na tela */
+            padding: 40px;
+            border-radius: 0 0 10px 10px; /* Borda suavemente arredondada embaixo */
+        }
+
+        /* Área do conteúdo principal */
+        main {
+            background-color: #FFFFFF;
+            color: #183C63;
+            display: flex; /* Alinha a imagem e o texto lado a lado */
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            gap: 20px; /* Espaço entre a imagem e o conteúdo */
+            border-radius: 8px; /* Arredonda os cantos do bloco */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve para dar profundidade */
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover; /* Evita que a imagem distorça caso mude de tamanho */
+            border-radius: 8px;
+        }
+
+        /* Destaque para o nome do autor */
+        .artigo-autor {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
     </header>
 
     <main>
-        <img src="videojogos.png" width="250" alt="Imagem de um quarto com uma televisão com uma estante cheia de consoles e aparelhos eletrônicos antigos.">
-
-        <p>Saiba tudo sobre consoles e games, história, curiosidades e a evolução dessa indústria.</p>
-
-        <p>Por: Victor Augusto</p>
+        <img src="videojogos.png"
+            alt="Explicação resumida sobre a Imagem escolhida, para as pessoas com dificuldades visuais.">
+        <div>
+            <h2>Primeiro post</h2>
+            <p class="artigo-autor">Por: Victor Augusto</p>
+            <p>Bem vindos! Aqui você descobre tudo sobre a história dos videogames.</p>
+            <button>👌<span>0</span></button>
+            <button>👍 <span>0</span></button>
+        </div>
     </main>
+
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    });
+</script>
+
 </html>
 
